@@ -4,15 +4,11 @@ import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '',
+  base: '', // for GitHub Pages or custom base paths, set if needed
   server: {
     port: 3000,
     watch: {
       usePolling: true,
-    },
-    static: {
-      directory: 'public',
-      serveDirectory: true
     }
   },
   build: {
@@ -21,7 +17,7 @@ export default defineConfig({
   publicDir: 'public',
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src')
-    }
-  }
+      '@': resolve(__dirname, './src'),
+    },
+  },
 })
