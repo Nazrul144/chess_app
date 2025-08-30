@@ -82,7 +82,7 @@ const Chessboard: FC<ChessboardProps> = ({
     <div className="chessboard">
       {ranks.map(rank =>
         files.map(file => {
-          const square = file + rank;
+          const square: Square = (file + rank) as Square;
           const piece = board[square];
           return (
             <div
